@@ -1,0 +1,115 @@
+
+
+body {
+    display: block;
+    background: black;
+    margin: 8px;
+}
+
+header {
+    border-bottom: solid 2px rgb(42, 122, 228);
+    padding: 20px;
+    font-size: 32px;
+    color: rgb(42, 122, 228);
+}
+.p{
+    color:white;
+    font-size:25px ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 2px 2px 4px rgba (0, 0 , 0, 0.5);
+}
+  
+
+.filme{
+     margin-bottom: 30px;
+     padding: 10px;
+    
+}
+.title{
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    font-size: 48px;
+    font-family: 'Arial', sans-serif;
+    color: #E50914;
+    font-weight: bold;
+}
+    
+
+
+
+.retangulo{
+    margin-right: 20px;
+    
+}
+
+
+section{
+    background:	#E50914;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+}
+.typing-text {
+    color: black;
+    font-weight: bold;
+    font-size: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #00ff00;
+    animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+}
+@keyframes typing {
+    from { width: 0; }
+    to { width: 40%; }
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    80% { border-color:#E50914; }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+   
+}
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; 
+    border-radius: 8px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.gallery-item iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    transition: opacity 0.3s ease; 
+}
+ .gallery-item:hover iframe {
+    opacity: 1; }
+
+.gallery-item:hover::before {
+    content: '▶';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: #fff;
+    opacity: 0.8;
+    pointer-events: none;
+}
